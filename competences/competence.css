@@ -1,0 +1,52 @@
+.competence-main {
+    padding-top: 6rem;
+    min-height: 100vh;
+}
+
+.competence-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.competence-header i {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.competence-header h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.competence-content {
+    display: grid;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.competence-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competence-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.competence-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.competence-section p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+} 

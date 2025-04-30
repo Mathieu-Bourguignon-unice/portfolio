@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathieu Bourguignon - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body class="light-mode">
+    <div class="neural-network"></div>
+    <nav class="navbar fade-in">
+        <div class="nav-content">
+            <div class="logo">MB</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="photos/photo_profil.png" alt="Mathieu Bourguignon">
+                </div>
+            </div>
+            <h1 class="hero-text fade-in">Bonjour, je suis Mathieu <span class="wave-emoji">👋</span></h1>
+            <div class="typing-wrapper fade-in">
+                <h2 class="hero-subtext">Je suis</h2>
+                <div class="typing-container">
+                    <span id="typed-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p>Je m'appelle Mathieu Bourguignon, j'ai 19 ans et je suis actuellement étudiant en première année de BUT Réseaux et Télécommunications. Ma passion pour l'informatique remonte à mon plus jeune âge, et je me suis particulièrement intéressé à la cybersécurité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <a href="competences/reseaux.html" class="skill-card">
+                    <div class="card-3d">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Réseaux</h3>
+                    </div>
+                </a>
+                <a href="competences/cybersecurite.html" class="skill-card">
+                    <div class="card-3d">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersécurité</h3>
+                    </div>
+                </a>
+                <a href="competences/programmation.html" class="skill-card">
+                    <div class="card-3d">
+                        <i class="fas fa-code"></i>
+                        <h3>Programmation</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-form-container fade-in">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Envoyer</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                </div>
+                <div class="contact-links fade-in">
+                    <a href="https://github.com/votre-github" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/votre-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

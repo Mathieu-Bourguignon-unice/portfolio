@@ -1,0 +1,20 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers de dépendances
+node_modules/
+package-lock.json
+
+# Fichiers de build
+dist/
+build/
+
+# Fichiers de cache
+.cache/ 

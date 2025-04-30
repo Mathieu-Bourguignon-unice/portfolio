@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM chargé");
     
     // Initialisation d'EmailJS
-    emailjs.init("7WXjYPOOprRE52vBT"); // Remplacez par votre User ID EmailJS
+    emailjs.init("7WXjYPOOprRE52vBT");
 
     // Initialisation de Typed.js
     const typed = new Typed('#typed-text', {
@@ -40,43 +40,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalBtnText = submitBtn.innerHTML;
         
+        // Vérification du CAPTCHA
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+            formStatus.textContent = "Veuillez vérifier que vous n'êtes pas un robot.";
+            formStatus.className = "form-status error";
+            return;
+        }
+        
         try {
-            // Désactiver le bouton et afficher le chargement
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
             
-            // Récupérer les données du formulaire
             const formData = {
                 name: contactForm.name.value,
                 email: contactForm.email.value,
-                message: contactForm.message.value
+                message: contactForm.message.value,
+                'g-recaptcha-response': recaptchaResponse
             };
 
-            // Envoyer l'email
             await emailjs.send(
-                "service_lizfir9", // Remplacez par votre Service ID
-                "template_dg4t8hj", // Remplacez par votre Template ID
+                "service_lizfir9",
+                "template_dg4t8hj",
                 formData
             );
 
-            // Afficher le message de succès
             formStatus.textContent = "Message envoyé avec succès !";
             formStatus.className = "form-status success";
-            
-            // Réinitialiser le formulaire
             contactForm.reset();
+            grecaptcha.reset(); // Réinitialiser le CAPTCHA
             
         } catch (error) {
-            // Afficher le message d'erreur
             formStatus.textContent = "Une erreur s'est produite. Veuillez réessayer.";
             formStatus.className = "form-status error";
             console.error('Erreur:', error);
         } finally {
-            // Réactiver le bouton
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnText;
             
-            // Masquer le message après 5 secondes
             setTimeout(() => {
                 formStatus.className = "form-status";
                 formStatus.textContent = "";

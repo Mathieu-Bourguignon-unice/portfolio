@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM chargé");
-    
+    //test
     // Initialisation d'EmailJS
     emailjs.init("7WXjYPOOprRE52vBT");
 

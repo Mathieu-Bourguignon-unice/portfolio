@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences & Projets - Mathieu Bourguignon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .competences-header {
+            text-align: center;
+            margin: 2rem 0 2rem 0;
+        }
+        .competence-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .competence-card {
+            background: rgba(20, 20, 40, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+            width: 260px;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.2rem 1.2rem 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+        }
+        .competence-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px rgba(80,80,255,0.18);
+        }
+        .competence-card img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--primary-color, #8B5CF6);
+            background: #222;
+        }
+        .competence-card h3 {
+            margin: 0.5rem 0 0.5rem 0;
+            font-size: 1.25rem;
+            color: var(--primary-color, #8B5CF6);
+        }
+        .competence-card p {
+            color: #c7c7e6;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .competence-card .voir-btn {
+            margin-top: auto;
+            background: var(--primary-color, #8B5CF6);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .competence-card .voir-btn:hover {
+            background: #6D28D9;
+        }
+        @media (max-width: 900px) {
+            .competence-cards {
+                gap: 1rem;
+            }
+            .competence-card {
+                width: 95vw;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="competences-header">
+                <h1 class="section-title">Mes Ressources & Projets</h1>
+                <p>
+                    Découvrez ci-dessous un aperçu de mes projets et ressources réalisés durant ma formation R&T. <br>
+                    Chaque carte présente une ressource ou un projet, son objectif et les compétences acquises.<br>
+                    Cliquez sur une carte pour accéder à une page détaillée avec des preuves, des explications et des exemples concrets.<br>
+                    N'hésitez pas à explorer pour mieux comprendre mon parcours et mes réalisations !
+                </p>
+            </div>
+            <div class="competence-cards">
+                <!-- Exemple de carte : remplace les liens et images par tes contenus réels -->
+                <div class="competence-card" onclick="window.location.href='ressource-reseaux.html'">
+                    <img src="photos/reseaux.jpg" alt="Réseaux">
+                    <h3>Conception et gestion de réseaux</h3>
+                    <p>Configuration de topologies, routage, VLAN, DHCP, sécurité réseau sur Cisco & Mikrotik.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-cyber.html'">
+                    <img src="photos/cyber.jpg" alt="Cybersécurité">
+                    <h3>Cybersécurité & Audit</h3>
+                    <p>Mise en place de pare-feu, segmentation, analyse de vulnérabilités et bonnes pratiques de sécurité.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-dev.html'">
+                    <img src="photos/dev.jpg" alt="Programmation">
+                    <h3>Développement d'applications</h3>
+                    <p>Création de scripts Python, sites web dynamiques, automatisation et projets collaboratifs.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-virtualisation.html'">
+                    <img src="photos/virtualisation.jpg" alt="Virtualisation">
+                    <h3>Virtualisation & Cloud</h3>
+                    <p>Déploiement de machines virtuelles, gestion de serveurs, découverte des solutions cloud.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-telecom.html'">
+                    <img src="photos/telecom.jpg" alt="Télécommunications">
+                    <h3>Technologies télécoms</h3>
+                    <p>Étude des protocoles VoIP, configuration de PBX, transmission de données et téléphonie IP.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-projet1.html'">
+                    <img src="photos/projet1.jpg" alt="Projet SAE 1">
+                    <h3>SAÉ 1 : Interconnexion de réseaux</h3>
+                    <p>Projet de mise en place d'une interconnexion sécurisée entre plusieurs sites distants.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-projet2.html'">
+                    <img src="photos/projet2.jpg" alt="Projet SAE 2">
+                    <h3>SAÉ 2 : Supervision & Monitoring</h3>
+                    <p>Déploiement de solutions de supervision réseau (Nagios, Zabbix), alerting et reporting.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-projet3.html'">
+                    <img src="photos/projet3.jpg" alt="Projet SAE 3">
+                    <h3>SAÉ 3 : Sécurisation d'infrastructure</h3>
+                    <p>Audit, durcissement des systèmes, rédaction de politiques de sécurité et documentation.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-projet4.html'">
+                    <img src="photos/projet4.jpg" alt="Projet Perso">
+                    <h3>Projet personnel : Portfolio Web</h3>
+                    <p>Création de ce site portfolio, responsive, moderne, et sécurisé avec formulaire de contact.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+                <div class="competence-card" onclick="window.location.href='ressource-projet5.html'">
+                    <img src="photos/projet5.jpg" alt="Projet Perso 2">
+                    <h3>Projet personnel : Script d'automatisation</h3>
+                    <p>Développement d'un script Python pour automatiser la sauvegarde et la gestion de fichiers.</p>
+                    <span class="voir-btn">Voir la ressource</span>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2.5rem;">
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

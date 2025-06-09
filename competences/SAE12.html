@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ12 - Réseaux Informatiques</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+
+    <main class="overview" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">SAÉ 12</span>
+                <h2 class="section-title">S'initier aux réseaux informatiques</h2>
+            </div>
+
+            <div class="overview-text">
+                <div class="fiche-section">
+                    <h3><i class="fas fa-bullseye"></i> Objectif du cours</h3>
+                    <p>Découvrir les bases des réseaux : topologies, adressage IP, configuration de routeurs et commutateurs.</p>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-project-diagram"></i> Projet réalisé</h3>
+                    <p><strong>TP :</strong> Création d’un réseau local simple avec Packet Tracer :</p>
+                    <ul>
+                        <li>Configuration de commutateurs Cisco</li>
+                        <li>Affectation d’adresses IP fixes</li>
+                        <li>Test de connectivité avec <code>ping</code></li>
+                        <li>Mise en place de VLAN simples</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-brain"></i> Compétences acquises</h3>
+                    <ul>
+                        <li>Comprendre le modèle OSI et les couches réseau</li>
+                        <li>Savoir affecter une adresse IP statique à un hôte</li>
+                        <li>Utiliser Packet Tracer pour simuler un réseau</li>
+                        <li>Manipuler l’interface CLI d’un switch ou routeur Cisco</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-paperclip"></i> Preuves associées</h3>
+                    <ul>
+                        <li><strong>Capture Packet Tracer :</strong></li>
+                        <img src="../photos/packettracer.jpg" alt="Topologie Packet Tracer">
+
+                        <li><strong>Extrait CLI commenté :</strong></li>
+                        <pre><code>Switch&gt;enable
+Switch#configure terminal
+Switch(config)#interface vlan 1
+Switch(config-if)#ip address 192.168.1.1 255.255.255.0
+Switch(config-if)#no shutdown</code></pre>
+                    </ul>
+                </div>
+
+                <div class="fiche-back">
+                    <a href="../competences.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Retour aux compétences
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

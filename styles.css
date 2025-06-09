@@ -974,3 +974,68 @@ footer {
     0%, 100% { transform: translateY(0) rotate(-45deg);}
     50% { transform: translateY(16px) rotate(-45deg);}
 }
+
+/* ---- Style Fiches Projets / SAÉ ---- */
+.fiche-section {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.05);
+    margin-bottom: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fiche-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+}
+
+.fiche-section h3 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.fiche-section ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.fiche-section ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+}
+
+.fiche-section pre {
+    background: #181828;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    color: #c7c7e6;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fiche-section img {
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 1.5rem 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fiche-section img:hover {
+    transform: scale(1.03);
+}
+
+.fiche-back {
+    text-align: center;
+    margin-top: 3rem;
+}

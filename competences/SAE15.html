@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ15 - Traiter des données</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <main class="overview" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">SAÉ 15</span>
+                <h2 class="section-title">Traiter des données</h2>
+            </div>
+
+            <div class="overview-text">
+                <div class="fiche-section">
+                    <h3><i class="fas fa-bullseye"></i> Objectif et problématique professionnelle</h3>
+<p>J'ai appris à manipuler des fichiers et extraire les infos utiles avec des scripts simples, pour gagner du temps et mieux comprendre les données.</p>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-project-diagram"></i> Projet réalisé</h3>
+                    <p><strong>Script d’automatisation en Python :</strong></p>
+                    <ul>
+                        <li>Traitement de fichiers texte (lecture, tri, formatage)</li>
+                        <li>Filtrage de données selon des critères définis</li>
+                        <li>Génération automatique de rapports ou fichiers de sortie</li>
+                        <li>Création d’un script adaptable à plusieurs cas concrets</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-brain"></i> Compétences ciblées</h3>
+                    <ul>
+                        <li>Manipuler des fichiers de données (texte, CSV)</li>
+                        <li>Appliquer des scripts Python pour automatiser le traitement</li>
+                        <li>Analyser et synthétiser des résultats pour une exploitation pratique</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-lightbulb"></i> Apprentissages critiques</h3>
+                    <ul>
+                        <li>AC13.01 | Utiliser un système informatique et ses outils</li>
+                        <li>AC13.03 | Rechercher, traiter et exploiter des données numériques</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-layer-group"></i> Ressources mobilisées</h3>
+                    <ul>
+                        <li>R1.08 | Bases des systèmes d’exploitation</li>
+                        <li>R1.09 | Introduction aux technologies Web</li>
+                        <li>R1.13 | Mathématiques du signal</li>
+                        <li>R1.14 | Mathématiques des transmissions</li>
+                        <li>R1.15 | Gestion de projet</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-paperclip"></i> Preuves associées</h3>
+                    <ul>
+                        <li><strong>Capture du terminal Python :</strong></li>
+                        <img src="photos/projet5.jpg" alt="Terminal Python script">
+
+                        <li><strong>Extrait du script commenté :</strong></li>
+                        <pre><code>with open("donnees.txt", "r") as f:
+    lignes = f.readlines()
+    donnees_filtrees = [ligne for ligne in lignes if "erreur" not in ligne.lower()]
+
+with open("rapport.txt", "w") as sortie:
+    sortie.write("\n".join(donnees_filtrees))</code></pre>
+                    </ul>
+                </div>
+
+                <div class="fiche-back">
+                    <a href="../competences.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Retour aux compétences
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

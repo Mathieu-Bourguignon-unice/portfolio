@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathieu Bourguignon - Portfolio</title>
+    <meta name="description" content="Portfolio de Mathieu Bourguignon, étudiant en Réseaux & Télécommunications, passionné de cybersécurité et développement web.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -13,7 +14,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">MB</div>
+            <a href="index.html" class="logo" aria-label="Accueil">MB</a>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À propos</a></li>
@@ -21,7 +22,7 @@
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Changer le thème">
                 <i class="fas fa-sun"></i>
                 <i class="fas fa-moon"></i>
             </button>
@@ -74,19 +75,35 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="btn btn-primary">
+                        <a href="CV_Mathieu_Bourguignon.pdf" class="btn btn-primary" target="_blank" rel="noopener">
                             <span>Resume</span>
                             <i class="fas fa-download"></i>
                         </a>
-                        <a href="#" class="btn btn-secondary">
+                        <a href="https://www.linkedin.com/in/tonprofil" class="btn btn-secondary" target="_blank" rel="noopener">
                             <span>LinkedIn</span>
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="btn btn-secondary">
+                        <a href="https://github.com/tonpseudo" class="btn btn-secondary" target="_blank" rel="noopener">
                             <span>GitHub</span>
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">À PROPOS</span>
+                <h2 class="section-title">Qui suis-je ?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>Je m'appelle Mathieu Bourguignon, étudiant en première année de BUT Réseaux et Télécommunications. Passionné par le développement et la cybersécurité, je suis constamment à la recherche de nouveaux défis et d'opportunités d'apprentissage.</p>
+                    <p>Mon parcours académique m'a permis d'acquérir des compétences solides en matière de configuration et de maintenance des infrastructures réseau, ainsi qu'en protection des systèmes et analyse de sécurité. J'ai également une expérience pratique dans le développement d'applications et de scripts.</p>
+                    <p>En dehors de mes études, je suis un amateur de nouvelles technologies et de sciences informatiques. J'aime explorer de nouveaux outils et langages de programmation, et je suis toujours curieux d'en apprendre davantage sur les dernières tendances en matière de cybersécurité.</p>
                 </div>
             </div>
         </div>
@@ -146,7 +163,7 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6Lf8dykrAAAAAPqWclcOdoYwYcETxn_dnJ4J0XmR"></div>
+                            <div class="g-recaptcha" data-sitekey="6LddiVorAAAAAPlMLiho3pO24dNwfcEzSOMVwgPF"></div>
                         </div>
                         <button type="submit" class="submit-btn">
                             <span>Envoyer</span>
@@ -160,9 +177,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Mathieu Bourguignon - Tous droits réservés</p>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

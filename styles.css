@@ -945,3 +945,32 @@ footer {
 .btn:hover i {
     transform: translateX(3px);
 }
+
+.scroll-down-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    z-index: 10;
+}
+
+.scroll-arrow-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.arrow {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-left: 4px solid #8B5CF6;
+    border-bottom: 4px solid #8B5CF6;
+    transform: rotate(-45deg);
+    animation: bounceDown 1.5s infinite;
+    margin-top: 10px;
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0) rotate(-45deg);}
+    50% { transform: translateY(16px) rotate(-45deg);}
+}

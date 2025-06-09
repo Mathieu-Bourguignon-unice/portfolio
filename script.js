@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialisation de Typed.js
     const typed = new Typed('#typed-text', {
         strings: [
-            "Étudiant en R&T",
+            "Étudiant en Réseaux et Télécommunications",
             "Passionné de Cybersécurité",
             "Développeur Web",
             "Curieux",

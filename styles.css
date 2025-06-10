@@ -1039,3 +1039,77 @@ footer {
     text-align: center;
     margin-top: 3rem;
 }
+
+        .competences-header {
+            text-align: center;
+            margin: 2rem 0 2rem 0;
+        }
+        .competence-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .competence-card {
+            background: rgba(20, 20, 40, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+            width: 260px;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.2rem 1.2rem 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+        }
+        .competence-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px rgba(80,80,255,0.18);
+        }
+        .competence-card img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--primary-color, #8B5CF6);
+            background: #222;
+        }
+        .competence-card h3 {
+            margin: 0.5rem 0 0.5rem 0;
+            font-size: 1.25rem;
+            color: var(--primary-color, #8B5CF6);
+        }
+        .competence-card p {
+            color: #c7c7e6;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .competence-card .voir-btn {
+            margin-top: auto;
+            background: var(--primary-color, #8B5CF6);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .competence-card .voir-btn:hover {
+            background: #6D28D9;
+        }
+        @media (max-width: 900px) {
+            .competence-cards {
+                gap: 1rem;
+            }
+            .competence-card {
+                width: 95vw;
+                max-width: 340px;
+            }
+        }

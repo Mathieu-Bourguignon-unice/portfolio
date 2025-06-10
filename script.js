@@ -21,6 +21,44 @@ document.addEventListener('DOMContentLoaded', () => {
         showCursor: false
     });
 
+    const cvButton = document.getElementById('cv-button');
+const modal = document.getElementById('cv-modal');
+const submitBtn = document.getElementById('cv-submit');
+const cancelBtn = document.getElementById('cv-cancel');
+const passwordInput = document.getElementById('cv-password');
+const errorMsg = document.getElementById('cv-error');
+
+// Mot de passe à personnaliser
+const correctPassword = "coco2024";
+
+cvButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    errorMsg.textContent = '';
+    passwordInput.value = '';
+});
+
+cancelBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+submitBtn.addEventListener('click', () => {
+    if (passwordInput.value === correctPassword) {
+        window.open('CV_Mathieu_Bourguignon.pdf', '_blank');
+        modal.style.display = 'none';
+    } else {
+        errorMsg.textContent = "Mot de passe incorrect.";
+    }
+});
+
+// Fermer la modale si clic hors contenu
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
     // Animation des éléments
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach((element, index) => {

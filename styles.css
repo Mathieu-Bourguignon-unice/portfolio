@@ -1113,3 +1113,113 @@ footer {
                 max-width: 340px;
             }
         }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 31, 0.9);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(20, 20, 40, 0.95);
+    border: 1px solid var(--primary-color);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    color: white;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 1px solid #666;
+    background: #181828;
+    color: white;
+}
+
+.modal-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#alien-invader {
+    position: fixed;
+    top: 15%;
+    left: -100px;
+    width: 60px;
+    z-index: 9999; /* Très important : il passe devant tout */
+    opacity: 0.08;
+    image-rendering: pixelated;
+    cursor: crosshair;
+    transition: opacity 0.3s, filter 0.3s;
+    pointer-events: auto; /* Assure le clic */
+    animation: alien-float 20s linear infinite;
+}
+
+#alien-invader:hover {
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 8px red);
+}
+
+
+@keyframes alien-float {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(120vw); }
+}
+
+/* Apparence infectée visible SEULEMENT à la fin */
+.bugged-card.infected {
+    box-shadow: 0 0 40px red;
+    background: #290015 !important;
+    transform: scale(1.03);
+}
+
+/* Supprime tous les effets au départ */
+.bugged-card:not(.infecting):not(.infected) {
+    background: rgba(255, 255, 255, 0.03); /* fond comme les autres cartes */
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Animation d'infection lente */
+.bugged-card.infecting {
+    animation: card-contaminate 8s forwards;
+}
+
+/* Animation de transformation */
+@keyframes card-contaminate {
+    0%   { box-shadow: none; transform: scale(1); background: inherit; }
+    20%  { box-shadow: 0 0 10px red; }
+    40%  { box-shadow: 0 0 20px red; transform: scale(1.01); }
+    60%  { box-shadow: 0 0 25px crimson; background: #19000c; }
+    80%  { box-shadow: 0 0 30px darkred; transform: scale(1.02); }
+    100% { box-shadow: 0 0 40px red; transform: scale(1.03); background: #290015; }
+}
+
+.bugged-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+

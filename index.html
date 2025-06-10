@@ -80,10 +80,11 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="CV_Mathieu_Bourguignon.pdf" class="btn btn-primary" target="_blank" rel="noopener">
-                            <span>Resume</span>
-                            <i class="fas fa-download"></i>
-                        </a>
+                       <a href="#" class="btn btn-primary" id="cv-button">
+    <span>Resume</span>
+    <i class="fas fa-lock"></i>
+</a>
+
                         <a href="https://www.linkedin.com/in/mathieu-bourguignon-b19419209/" class="btn btn-secondary" target="_blank" rel="noopener">
                             <span>LinkedIn</span>
                             <i class="fab fa-linkedin"></i>
@@ -194,5 +195,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <div id="cv-modal" class="modal">
+    <div class="modal-content">
+        <h3>Accès protégé</h3>
+        <p>Si vous n'avez pas le mot de passe, <a href="#contact" class="contact-link">veuillez me contacter</a>.</p>
+        <input type="password" id="cv-password" placeholder="Mot de passe" />
+        <div class="modal-actions">
+            <button id="cv-submit" class="btn btn-primary">Valider</button>
+            <button id="cv-cancel" class="btn btn-secondary">Annuler</button>
+        </div>
+        <p id="cv-error" class="error-msg"></p>
+    </div>
+</div>
+
 </body>
 </html>

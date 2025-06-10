@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet personnel - PHOTO_ATB</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <main class="overview" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">SAÉ 15 / PROJET PERSONNEL</span>
+                <h2 class="section-title">Développement du projet PHOTO_ATB</h2>
+            </div>
+
+            <div class="overview-text">
+                <div class="fiche-section">
+                    <h3><i class="fas fa-info-circle"></i> Contexte</h3>
+                    <p>PHOTO_ATB est un projet d’étude réalisé dans le cadre de la SAÉ15. L’objectif est de développer une application complète capable de prendre des photos de bancs avioniques, de les enregistrer dans une base de données sécurisée et de gérer les droits d’accès selon le rôle de l’utilisateur.</p>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-users"></i> Équipe & responsabilités</h3>
+                    <p>Nous sommes une équipe de 4 personnes. Je suis responsable de la partie organisation du groupe, de l’électronique (Raspberry Pi + Pico), et de l’intégration backend (base de données, scripts, interface matérielle). Les autres membres s’occupent du site web, de la base de données et du design général.</p>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-code"></i> Compétences mobilisées</h3>
+                    <ul>
+                        <li>Python (scripts de prise de vue + envoi de données)</li>
+                        <li>PHP / HTML pour l’interface web utilisateur</li>
+                        <li>SQL pour stocker les photos, dates et utilisateurs</li>
+                        <li>Gestion de projet en équipe (répartition, calendrier, documentation)</li>
+                        <li>Utilisation et configuration d’un Raspberry Pi avec caméra</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-wrench"></i> Avancement</h3>
+                    <ul>
+                        <li>Base de données en cours de finalisation</li>
+                        <li>Connexion Raspberry Pi fonctionnelle (prise de photo OK)</li>
+                        <li>Authentification utilisateur en cours d’intégration</li>
+                        <li>Tests en environnement local sur bancs simulés</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-paperclip"></i> Preuves</h3>
+                    <ul>
+                        <li><strong>Capture interface en développement :</strong></li>
+                        <img src="../photos/webpage.png" alt="Interface web PHOTO_ATB">
+
+                        <li><strong>Extrait de code Python (prise de photo) :</strong></li>
+                        <pre><code>from picamera import PiCamera
+from time import sleep
+
+camera = PiCamera()
+camera.start_preview()
+sleep(2)
+camera.capture('/home/pi/photo.jpg')
+camera.stop_preview()</code></pre>
+                    </ul>
+                </div>
+
+                <div class="fiche-back">
+                    <a href="../competences.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Retour aux compétences
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

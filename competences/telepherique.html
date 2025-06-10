@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet personnel - Téléphérique STI2D</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <main class="overview" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PROJET PERSONNEL</span>
+                <h2 class="section-title">Téléphérique automatisé – STI2D</h2>
+            </div>
+
+            <div class="overview-text">
+                <div class="fiche-section">
+                    <h3><i class="fas fa-info-circle"></i> Contexte</h3>
+                    <p>Ce projet a été réalisé en terminale STI2D en groupe de 4 personnes. L’objectif était de concevoir et simuler un téléphérique miniature automatisé à l’aide d’un Arduino. Nous avons utilisé des capteurs à ultrasons pour détecter la position, un moteur pour l'entraînement, et avons réalisé toutes les simulations sur Tinkercad.</p>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-tools"></i> Mon rôle</h3>
+                    <p>Je me suis occupé de toute la partie programmation, du branchement des composants et de l’aspect électronique (liaison capteurs, commande moteur…). Les autres membres du groupe étaient responsables de l’étude EE et ITEC (structure, mécanique, énergie).</p>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-code"></i> Compétences mobilisées</h3>
+                    <ul>
+                        <li>Programmation Arduino (C/C++)</li>
+                        <li>Utilisation de capteurs à ultrasons (HC-SR04)</li>
+                        <li>Commande de moteur par signal numérique</li>
+                        <li>Montage électronique et câblage logique</li>
+                        <li>Simulation complète sous Tinkercad</li>
+                    </ul>
+                </div>
+
+                <div class="fiche-section">
+                    <h3><i class="fas fa-paperclip"></i> Preuves</h3>
+                    <ul>
+                        <li><strong>Capture du montage 3D :</strong></li>
+                        <img src="../photos/Capture_assemblage.PNG" alt="Montage téléphérique Arduino sur Tinkercad">
+
+                        <li><strong>Extrait de code Arduino :</strong></li>
+                        <pre><code>long distance = sonar.read();
+if (distance &lt; 10) {
+    digitalWrite(motorPin, LOW); // Arrêt moteur
+} else {
+    digitalWrite(motorPin, HIGH); // Lancement
+}</code></pre>
+<img src="../photos/cablage.jpg" alt="Câblage du téléphérique Arduino">
+                    </ul>
+                </div>
+
+                <div class="fiche-back">
+                    <a href="../competences.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Retour aux compétences
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

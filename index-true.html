@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathieu Bourguignon - Portfolio</title>
+    <meta name="description" content="Portfolio de Mathieu Bourguignon, étudiant en Réseaux & Télécommunications, passionné de cybersécurité et développement web.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo" aria-label="Accueil">MB</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences & Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Changer le thème">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="background-pattern"></div>
+        <div class="hero-content">
+            <div class="intro-section">
+                <h1 class="main-title fade-in">Hi, I'm <span class="highlight">Mathieu</span> <span class="wave-emoji">👋</span></h1>
+                <div class="subtitle fade-in">
+                    <span>Je suis</span>
+                    <span id="typed-text" class="highlight"></span>
+                </div>
+                <p class="welcome-text fade-in">Bienvenue sur mon portfolio, découvrez mes projets !</p>
+            </div>
+        </div>
+        <!-- Flèche animée vers le bas -->
+        <div class="scroll-down-arrow" style="text-align:center; margin-top:2.5rem;">
+            <a href="#overview" class="scroll-arrow-link" aria-label="Aller à l'introduction">
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">INTRODUCTION</span>
+                <h2 class="section-title">Overview.</h2>
+            </div>
+            <div class="overview-content">
+                <div class="profile-container">
+                    <div class="profile-image-wrapper">
+                        <img src="photos/photo_profil.png" alt="Mathieu Bourguignon" class="profile-image">
+                    </div>
+                </div>
+                <div class="overview-text">
+                    <div class="overview-items">
+                        <div class="overview-item fade-in">
+                            <i class="fas fa-code"></i>
+                            <p>Étudiant en R&T passionné par le développement et la cybersécurité</p>
+                        </div>
+                        <div class="overview-item fade-in">
+                            <i class="fas fa-graduation-cap"></i>
+                            <p>Actuellement en première année de BUT Réseaux et Télécommunications</p>
+                        </div>
+                        <div class="overview-item fade-in">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Spécialisé dans les projets réseau et la sécurité informatique</p>
+                        </div>
+                        <div class="overview-item fade-in">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Toujours curieux et en apprentissage constant</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                       <a href="#" class="btn btn-primary" id="cv-button">
+    <span>Resume</span>
+    <i class="fas fa-lock"></i>
+</a>
+
+                        <a href="https://www.linkedin.com/in/mathieu-bourguignon-b19419209/" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <span>LinkedIn</span>
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Mathieu-Bourguignon-unice" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <span>GitHub</span>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">À PROPOS</span>
+                <h2 class="section-title">Qui suis-je ?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>Je suis Mathieu Bourguignon, étudiant en première année de BUT Réseaux & Télécommunications, passionné par tout ce qui touche aux systèmes, aux câbles... et aux failles de sécurité !</p>
+                    <p>Toujours à l'affût de nouveaux défis, je m'épanouis dans le développement d'outils pratiques et dans la sécurisation des infrastructures réseau. Mon parcours m’a permis d’acquérir une solide base en cybersécurité, administration réseau, et programmation.</p>
+                    <p>🔧 Mon quotidien : configurer, tester, corriger.</p>
+                    <p>💡 Ma motivation : apprendre, encore et toujours.</p>
+                    <p>🌱 Mon objectif : devenir un professionnel capable de bâtir des solutions fiables et sécurisées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CE QUE JE FAIS</span>
+                <h2 class="section-title">Mes Compétences & Projets</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="card-3d">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Réseaux</h3>
+                        <p>Configuration et maintenance des infrastructures réseau</p>
+                    </div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="card-3d">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersécurité</h3>
+                        <p>Protection des systèmes et analyse de sécurité</p>
+                    </div>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="card-3d">
+                        <i class="fas fa-code"></i>
+                        <h3>Programmation</h3>
+                        <p>Développement d'applications et scripts</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="competences.html" class="btn btn-primary">
+                    Découvrir toutes les compétences & projets
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">RESTONS EN CONTACT</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container fade-in">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LddiVorAAAAAPlMLiho3pO24dNwfcEzSOMVwgPF"></div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Envoyer</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mathieu Bourguignon - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="cv-modal" class="modal">
+    <div class="modal-content">
+        <h3>Accès protégé</h3>
+        <p>Si vous n'avez pas le mot de passe, <a href="#contact" class="contact-link">veuillez me contacter</a>.</p>
+        <input type="password" id="cv-password" placeholder="Mot de passe" />
+        <div class="modal-actions">
+            <button id="cv-submit" class="btn btn-primary">Valider</button>
+            <button id="cv-cancel" class="btn btn-secondary">Annuler</button>
+        </div>
+        <p id="cv-error" class="error-msg"></p>
+    </div>
+</div>
+
+</body>
+</html>
